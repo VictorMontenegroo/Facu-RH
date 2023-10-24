@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>LoginPage</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Bem vindo!</h1>
+            <img src="ux.svg" class="left-login-image" alt="UX">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield-email">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email" placeholder="Email">
+                    <p class="email-invalido">Email inválido</p>
+                </div>
+                <div class="textfield-senha">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" name="senha" placeholder="Senha">
+                    <p class="senha-invalida">Senha inválida</p>
+                </div>
+                <button id="bnt-login">Login</button>
+            </div>
+        </div>
+    </div>   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="login.js"></script> 
+</body>
+</html>

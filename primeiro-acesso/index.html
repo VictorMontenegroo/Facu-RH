@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LoginPage</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Primeiro acesso? <br> Faça a troca da sua senha.</h1>
+            <img src="ux.svg" class="left-login-image" alt="UX">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Troca de Senha</h1>
+                <div class="textfield-email">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email" placeholder="Email">
+                    <p class="email-invalido">Email inválido</p>
+                </div>
+                <div class="textfield-senha">
+                    <label for="senhaVelha">Senha Antiga</label>
+                    <input id="senhaVelha" type="password" name="senhaVelha" placeholder="Senha Antiga">
+                    <p class="senha-invalida">Senha inválida</p>
+                </div>
+                <div class="textfield-nova-senha1">
+                    <label for="senhaNova">Senha Nova</label>
+                    <input id="senhaNova" type="password" name="senhaNova" placeholder="Senha Nova">
+                    <p class="senha-invalida1"></p>
+                </div>
+
+                <div class="textfield-nova-senha2">
+                    <label for="confirmaSenhaNova">Confirma Senha Nova</label>
+                    <input id="confirmaSenhaNova" type="password" name="confirmaSenhaNova" placeholder="Senha Nova">
+                    <p class="senha-invalida2"></p>
+                </div>
+                <button id="bnt-nova-senha">Trocar Senha</button>
+            </div>
+        </div>
+    </div>   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>

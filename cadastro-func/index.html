@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Cadastro de Funcionário</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+          <i class="bx bx-menu" id="sidebarOpen"></i>
+          <img src="images/logo.png" alt=""></i>GPMV SYSTEM
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <i class="bi bi-grid"></i>
+          <i id="darkLight"></i>
+          <i class='bx bx-bell' ></i>
+          <img src="images/profile.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+      <!-- sidebar -->
+      <nav class="sidebar">
+        <div class="menu_content">
+          <ul class="menu_items">
+            <div class="menu_title menu_dahsboard"></div>
+            <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+            <!-- start -->
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                    <i class='bx bx-edit-alt'></i>
+                </span>
+                <span class="navlink">Actions</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+              </div>
+  
+              <ul class="menu_items submenu">
+                <a href="../cadastro-func/index.html" class="nav_link sublink">Cadastro</a>
+                <a href="../listagem-func/index.html" class="nav_link sublink">Listagem</a>
+                <a href="../beneficios/index.html" class="nav_link sublink">Beneficios</a>
+              </ul>
+            </li>
+            <!-- end -->
+  
+          </ul>
+          <!-- Sidebar Open / Close -->
+          <div class="bottom_content">
+            <ul class="bottom collapse_sidebar">
+              <a href="../login/login.html">Logout</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header">
+        <h2>Cadastre um funcionário!</h2>
+      </div>
+
+      <div class="container">
+        
+  
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="username">Nome Completo</label>
+            <input
+              type="text"
+              autocomplete="off"
+              id="username"
+              placeholder="Digite seu nome de usuário..."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <form id="form" class="form">
+            <div class="form-control">
+              <label for="mae">Nome Completo da Mãe</label>
+              <input
+                type="text"
+                autocomplete="off"
+                id="mae"
+                placeholder="Digite o nome completo da sua Mãe..."
+              />
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              <small>Mensagem de erro</small>
+            </div>
+  
+            <form id="form" class="form">
+              <div class="form-control">
+                <label for="pai">Nome Completo do Pai</label>
+                <input
+                  type="text"
+                  autocomplete="off"
+                  id="pai"
+                  placeholder="Digite o nome completo do seu Pai..."
+                />
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+              </div>
+  
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" autocomplete="off" placeholder="Digite seu email..." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+            <label for="cpf">CPF</label>
+            <input type="text" 
+              id="cpf" 
+              autocomplete="off" 
+              maxlength="14" 
+              onkeyup="mascara_cpf()" 
+              placeholder="Digite seu CPF..." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+  
+            <script>
+              function mascara_cpf() {
+                var cpf = document.getElementById('cpf')
+                if(cpf.value.length == 3 || cpf.value.length == 7) {
+                  cpf.value += "."
+                }else if(cpf.value.length == 11) {
+                  cpf.value += "-"
+                }
+              }
+            </script>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+            <label for="rg">RG</label>
+            <input type="text"
+              id="rg" 
+              autocomplete= "off"
+              maxlength="12"
+              onkeyup="mascara_rg()" 
+              placeholder= "Digite seu RG..." />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+          <script>
+            function mascara_rg() {
+              var rg = document.getElementById('rg')
+              if(rg.value.length == 2 || rg.value.length == 6) {
+                rg.value += "."
+              }else if(rg.value.length == 10) {
+                rg.value += "-"
+              }
+            }
+          </script>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <div class="form-control">
+            <label for="data">Data de Nascimento</label>
+            <input
+              type="date"
+              id="data"
+              placeholder="Digite sua Data de Nascimento..."
+            />
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+          </div>
+  
+          <form id="form" class="form">
+            <div class="form-control">
+              <label for="cargo">Cargo</label>
+              <input
+                type="text"
+                autocomplete="off"
+                id="cargo"
+                placeholder="Digite o cargo..."
+              />
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              <small>Mensagem de erro</small>
+            </div>
+  
+          <button type="submit">Admitir Funcionário</button>
+        </form>
+      </div>
+
+      <!-- JavaScript -->
+      
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="script.js"></script>   
+</body>
+</html>

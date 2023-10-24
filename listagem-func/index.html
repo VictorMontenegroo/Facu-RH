@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Listagem de Funcionário</title>
+</head>
+<body style="background-color: #333;">
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+          <i class="bx bx-menu" id="sidebarOpen"></i>
+          <img src="images/logo.png" alt=""></i>GPMV SYSTEM
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <i class="bi bi-grid"></i>
+          <i id="darkLight"></i>
+          <i class='bx bx-bell' ></i>
+          <img src="images/profile.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+      <!-- sidebar -->
+      <nav class="sidebar">
+        <div class="menu_content">
+          <ul class="menu_items">
+            <div class="menu_title menu_dahsboard"></div>
+            <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+            <!-- start -->
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                    <i class='bx bx-edit-alt'></i>
+                </span>
+                <span class="navlink">Actions</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+              </div>
+  
+              <ul class="menu_items submenu">
+                <a href="../cadastro-func/index.html" class="nav_link sublink">Cadastro</a>
+                <a href="" class="nav_link sublink">Listagem</a>
+                <a href="../beneficios/index.html" class="nav_link sublink">Beneficios</a>
+              </ul>
+            </li>
+            <!-- end -->
+  
+          </ul>
+          <!-- Sidebar Open / Close -->
+          <div class="bottom_content">
+            <ul class="bottom collapse_sidebar">
+              <a href="../login/login.html">Logout</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <button id="btn-consultar" class="btn btn-primary">Consultar</button>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <table id="tabela" class="table table-striped table-hover">
+              <thead class="thead-dark">
+                  <th>Matrícula</th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>CPF</th>
+                  <th>Cargo</th>
+                  <th>Data Admissao</th>
+                  <th>Atualizar</th>
+              </thead>
+              <tbody class="tbody">
+                  
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="script.js"></script>
+      <script src="../script.js"></script>
+
+</body>
+</html>
